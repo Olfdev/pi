@@ -3,10 +3,6 @@ const bannerImg = document.getElementById('banner-images');
 const bannerDots = document.getElementById('dots');
 const arrowLeft = document.getElementById('arrow-left');
 const arrowRight = document.getElementById('arrow-right');
-//const bannerImg = document.querySelector('.banner-images');
-//const bannerDots = document.querySelector('.dots');
-//const arrowLeft = document.querySelector('.arrow-left');
-//const arrowRight = document.querySelector('.arrow-right');
 const slides = [
 	{
 		"image":"slide1.jpg",
