@@ -29,7 +29,7 @@ const slides = [
 //create images and their respective text
 function createImages(){
 	for (let i = 0; i < slides.length; i++) {
-
+		
 		//create <div> and append it to #banner-images
 		const div = document.createElement("div");
 		div.classList.add('image')
@@ -82,10 +82,9 @@ for (let i = 0; i < slides.length; i++) {
 //current image
 function updateImageIndex(newIndex) {
 	imageIndex = newIndex;
-	if (imageIndex < 0) {
+	if (imageIndex < 0){
 		imageIndex = slides.length - 1;
-	} else if (
-		imageIndex >= slides.length) {
+	}else if (imageIndex >= slides.length){
 		imageIndex = 0;
 	}
 	slideImages();
@@ -96,10 +95,10 @@ function updateImageIndex(newIndex) {
 function updateActiveDot() {
 	const dots = bannerDots.querySelectorAll('.dot');
 	dots.forEach((dot, index) => {
-		if (index === imageIndex) {
+		if (index === imageIndex){
 			dot.style.backgroundColor = "white";
 			dot.style.opacity = "1";
-		} else {
+		}else{
 			dot.style.backgroundColor = "transparent";
 			dot.style.opacity = "0.7";
 		}
