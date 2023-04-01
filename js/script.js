@@ -6,23 +6,19 @@ const arrowRight = document.getElementById('arrow-right');
 const slides = [
 	{
 		"image":"slide1.jpg",
-		"title":"Impressions tous formats ",
-		"subtitle":"en boutique et en ligne"
+		"title":"Impressions tous formats <span>en boutique et en ligne</span>"
 	},
 	{
 		"image":"slide2.jpg",
-		"title":"Tirages haute définition grand format ",
-		"subtitle":"pour vos bureaux et events"
+		"title":"Tirages haute définition grand format <span>pour vos bureaux et events</span>"
 	},
 	{
 		"image":"slide3.jpg",
-		"title":"Grand choix de couleurs ",
-		"subtitle":"de CMJN aux pantones"
+		"title":"Grand choix de couleurs <span>de CMJN aux pantones</span>"
 	},
 	{
 		"image":"slide4.jpg",
-		"title":"Autocollants ",
-		"subtitle":"avec découpe laser sur mesure"
+		"title":"Autocollants <span>avec découpe laser sur mesure</span>"
 	}
 ];
 
@@ -44,18 +40,7 @@ function createImages(){
 		//create <p> and append it to above <div>
 		const p = document.createElement("p");
 		div.appendChild(p);
-
-		//create title text and append it to the above <p>
-		const ptxt = document.createTextNode(slides[i].title);
-		p.appendChild(ptxt);
-
-		//create <span> and append it to the above <p>
-		const span = document.createElement("span");
-		p.appendChild(span);
-
-		//create subtitle text and append it to the above <span>
-		const spantxt = document.createTextNode(slides[i].subtitle);
-		span.appendChild(spantxt);
+		p.innerHTML = slides[i].title;
 	}
 }
 
