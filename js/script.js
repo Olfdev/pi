@@ -32,13 +32,13 @@ function createImages(){
 		
 		//create <div> and append it to #banner-images
 		const div = document.createElement("div");
-		div.classList.add('image')
+		div.classList.add('image');
 		bannerImg.appendChild(div);
 
 		//create <img>, image source & alt, and append it to the above <div>
 		const img = document.createElement("img");
 		img.src = `./assets/images/slideshow/${slides[i].image}`;
-		img.alt = "Banner Print-it"
+		img.alt = "Banner Print-it";
 		div.appendChild(img);
 		
 		//create <p> and append it to above <div>
