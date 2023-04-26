@@ -44,10 +44,8 @@ function createImages(){
 		const p = document.createElement("p");
 		div.appendChild(p);
 		p.innerHTML = slides[i].title;
-	}
 
-	//create dots
-	for (let i = 0; i < slides.length; i++) {
+		//create dots
 		const dot = document.createElement('div');
 		dot.classList.add('dot');
 		dot.addEventListener('click', () => {
