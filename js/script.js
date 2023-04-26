@@ -1,3 +1,6 @@
+//initialize imageIndex variable
+let imageIndex = 0;
+
 //get elements from DOM
 const bannerImg = document.getElementById('banner-images');
 const bannerDots = document.getElementById('dots');
@@ -42,26 +45,24 @@ function createImages(){
 		div.appendChild(p);
 		p.innerHTML = slides[i].title;
 	}
-}
 
-//initialize imageIndex variable
-let imageIndex = 0;
+	//create dots
+	for (let i = 0; i < slides.length; i++) {
+		const dot = document.createElement('div');
+		dot.classList.add('dot');
+		dot.addEventListener('click', () => {
+			updateImageIndex(i);
+			dot.style.backgroundColor = "white";
+			dot.style.opacity = "1";
+		});
+		bannerDots.appendChild(dot);
+		updateImageIndex(0);
+	}
+}
 
 //image slide (percentage)
 function slideImages() {
 	bannerImg.style.transform = `translateX(-${imageIndex * 100}%)`;
-}
-
-//create dots
-for (let i = 0; i < slides.length; i++) {
-	const dot = document.createElement('div');
-	dot.classList.add('dot');
-	dot.addEventListener('click', () => {
-		updateImageIndex(i);
-		dot.style.backgroundColor = "white";
-		dot.style.opacity = "1";
-	});
-	bannerDots.appendChild(dot);
 }
 
 //current image
@@ -84,8 +85,8 @@ function updateActiveDot() {
 			dot.style.backgroundColor = "white";
 			dot.style.opacity = "1";
 		}else{
-			dot.style.backgroundColor = "transparent";
-			dot.style.opacity = "0.7";
+			dot.style.backgroundColor = null;
+			dot.style.opacity = null;
 		}
 	});
 }
