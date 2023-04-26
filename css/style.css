@@ -125,7 +125,7 @@ header{
 
 #banner .arrow{
 	position: absolute;
-	transform-origin: center;
+	/* transform-origin: center; */
 	top: 50%;
     transform: translateY(-50%);
 	cursor: pointer;
