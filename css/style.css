@@ -228,7 +228,7 @@ header{
 }
 
 #about-us li{
-	background: url("/assets/images/tricolor-icon.png") no-repeat left top;
+	background: url("../assets/images/tricolor-icon.png") no-repeat left top;
 	font-size: 16px;
 	line-height: 26px;
 	padding-left:2em;
