@@ -316,7 +316,7 @@ header{
 
 #contact h3{
 	margin-top: 0;
-	background: url("/assets/images/tricolor-icon.png") no-repeat left top;
+	background: url("../assets/images/tricolor-icon.png") no-repeat left top;
 	padding-left:1.5em;
 	width: 200px;
 }
